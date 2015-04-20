@@ -3,10 +3,10 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'pry_syslog/version'
+require 'pry-syslog/version'
 
 Gem::Specification.new do |spec|
-  spec.name     = 'pry_syslog'
+  spec.name     = 'pry-syslog'
   spec.version  = PrySyslog::VERSION
   spec.authors  = ['Sam Stelfox']
   spec.email    = ['sstelfox@bedroomprogrammers.net']

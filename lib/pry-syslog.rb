@@ -1,5 +1,5 @@
 require 'pry'
-require 'pry_syslog/version'
+require 'pry-syslog/version'
 require 'syslog/logger'
 
 # Parent namespace of the pry-syslog gem.

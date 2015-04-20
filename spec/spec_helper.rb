@@ -16,7 +16,7 @@ end
 
 SimpleCov.start
 
-require 'pry_syslog'
+require 'pry-syslog'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
