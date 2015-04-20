@@ -58,7 +58,7 @@ With all that said, if you'd like to contribute please follow the standard
 contribution guide:
 
 1. Review the [Contributor Code of Conduct][1]
-2. Fork it ( https://github.com/[my-github-username]/pry_syslog/fork )
+2. Fork it ( https://github.com/sstelfox/pry-syslog/fork )
 3. Create your feature branch (`git checkout -b my-new-feature`)
 4. Commit your changes (`git commit -am 'Add some feature'`)
 5. Push to the branch (`git push origin my-new-feature`)
