@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.summary      = 'A small gem that hooks the pry history to send ' \
                       'executed commands to syslog for auditing purposes.'
   spec.description  = spec.summary
-  spec.homepage     = 'https://github.com/sstelfox/pry_syslog'
+  spec.homepage     = 'https://github.com/sstelfox/pry-syslog'
   spec.license      = 'MIT'
 
   spec.require_paths = ['lib']
