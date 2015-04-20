@@ -32,7 +32,7 @@ task :default do
 end
 
 task 'environment' do
-  require 'pry-syslog'
+  require 'pry_syslog'
 end
 
 desc 'Run a console with the application loaded'
