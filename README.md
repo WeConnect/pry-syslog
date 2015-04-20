@@ -1,11 +1,23 @@
 # PrySyslog
 
+This Pry plugin was originally written to solve an auditing issue in production
+instances. Using auditd we're able to log all commands executed, but that only
+extends to the application that was executed (which for pry is ruby). Relying
+exclusively on .pry_history files for auditing wasn't sufficient.
+
+This gem will log all valid Ruby executed in a pry session to syslog at the
+'info' message level on the 'local1' logging facility. Additionally the custom
+app name of 'pry_history' will be used. This isn't currently configurable.
+
+This plugin is non-invasive to anything pry related as it makes use of Pry's
+native exposed hooks.
+
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'pry_syslog'
+gem 'pry-syslog'
 ```
 
 And then execute:
@@ -17,6 +29,18 @@ Or install it yourself as:
     $ gem install pry-syslog
 
 ## Usage
+
+When this gem is installed anytime Pry gets executed from any context it will
+automatically detect and load this plugin. When this happens you will see a
+note like the following indicating the session is being logged:
+
+```
+[user@host ~/] $ pry
+Please note: This interactive session has PrySyslog enabled. All
+valid Ruby entered here will be sent to Syslog before being executed
+for auditing purposes.
+[1] pry(main)>
+```
 
 ## Contributing
 

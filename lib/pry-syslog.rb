@@ -5,7 +5,9 @@ require 'syslog/logger'
 # Parent namespace of the pry-syslog gem.
 module PrySyslog
   def self.announce_logging
-    puts 'All commands executed in this session will be logged to syslog.'
+    puts 'Please note: This interactive session has PrySyslog enabled. All'
+    puts 'valid Ruby entered here will be sent to Syslog before being executed'
+    puts 'for auditing purposes.'
   end
 
   def self.log_code_execution(code)
