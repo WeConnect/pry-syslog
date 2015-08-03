@@ -14,6 +14,10 @@ module PrySyslog
     syslog.unknown(code)
   end
 
+  def self.log_code_output(output)
+    syslog.unknown(output)
+  end
+
   def self.syslog
     @syslog ||= ::Syslog::Logger.new('pry_history', Syslog::LOG_LOCAL1)
   end
@@ -25,4 +29,8 @@ end
 
 Pry.config.hooks.add_hook(:before_eval, :log_code_execution) do |code|
   PrySyslog.log_code_execution(code)
+end
+
+Pry.config.hooks.add_hook(:after_eval, :log_code_output) do |output, instance|
+  PrySyslog.log_code_output(output)
 end
