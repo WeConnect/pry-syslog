@@ -11,7 +11,7 @@ module PrySyslog
   end
 
   def self.log_code_execution(code)
-    syslog.info(code)
+    syslog.unknown(code)
   end
 
   def self.syslog
